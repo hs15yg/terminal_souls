@@ -8,32 +8,32 @@ import time
 import headers
 
 
-def turno_jugador():
+def player_turn():
     interupt = True
     while interupt:
         os.system('clear') 
         
-        print(f"Turno del Jugador:\nOpciones:\n\n1. {headers.colors["RED"]}Atacar{headers.colors["RESET"]}\n2. {headers.colors["WHITE"]}Curar{headers.colors["RESET"]}\n3. {headers.colors["BLUE"]}Habilidad Especial{headers.colors["RESET"]}\n4. {headers.colors["YELLOW"]}Pasar Turno{headers.colors["RESET"]}")
+        print(f"Player Turn:\nOptions:\n\n1. {headers.colors["RED"]}Attack⚔️{headers.colors["RESET"]}\n2. {headers.colors["WHITE"]}Cure💊{headers.colors["RESET"]}\n3. {headers.colors["BLUE"]}Special Ability✨{headers.colors["RESET"]}\n4. {headers.colors["YELLOW"]}Dodge💨{headers.colors["RESET"]}")
         try:    
-            op = int(input("Elegir acción -> "))
+            op = int(input("Choice action -> "))
             if op == 1:
-                print("Atacar")
+                print("Attack")
                 interupt = False
             elif op == 2:
-                print("Curar")
+                print("Cure")
                 interupt = False
             elif op == 3:
-                print("Habilidad Especial")
+                print("special ability")
                 interupt = False
             else:
                 os.system('clear') 
-                print(f"{RED}[x]{RESET} Deber elegir una opcion valida!")
+                print(f"{RED}[x]{RESET} you must choose a valid option")
                 time.sleep(1)
 
         except:
             os.system('clear') 
-            print(f"{RED}[x]{RESET} Revisa que estes insertando datos numericos")
+            print(f"{RED}[x]{RESET} check that they are entering numerical data")
             time.sleep(1)
 
 
-turno_jugador()
+player_turn()

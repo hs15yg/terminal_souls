@@ -16,27 +16,36 @@ def damage(life, min=10, max=25, malice = False):
         combat = random.randint(min , max)
     # i use return to return the damage dealt
     
-    life -= combat
+    life -= combat 
+    print("the hero has lost this part of life 😢" , combat )
+
     
-    return print("the hero has lost this part of life 😢" , combat )
+    return life
 
 
 # life bar function
 def life_bar (hp_hero , hp_enemy , enemy, hero):
     hero_bar = ""   
-    for i in range(1, hp_hero , 10):
-        hero_bar += "#"
+    # use a for loop that goes from 1 to 100 (or 120 for the enemy) jumping by 10 this means the bar will be about 10 or 12 units long
+    for i in range(1, 100 , 10):
+        if i <= hp_hero:
+            hero_bar += "#"
+        else:
+            hero_bar += "-"
 
     enemy_bar = "" 
-    for i in range (1, hp_enemy , 10):
-        enemy_bar += "#"
-
+    for i in range(1, 120 , 10):
+        if i <= hp_enemy:
+            enemy_bar += "#"
+        else:
+            enemy_bar += "-"
+    # use variables like red ,reset and black. 
     return print(f"💪{hero}: {RED}{hero_bar}{RESET} {hp_hero}% \n🦹{enemy}: {BLACK}{enemy_bar}{RESET} {hp_enemy}%")
     
 
 
 
-life_bar (100, 120, "enemy","hero")
+life_bar (100, 50, "enemy","hero")
 
 damage(life=100)
 
