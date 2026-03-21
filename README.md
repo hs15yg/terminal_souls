@@ -12,7 +12,7 @@
     * ⚔️ **Attack:** Standard strike with a chance for critical damage.
     * 💊 **Heal:** Consume a potion to restore your HP.
     * ✨ **Special Ability:** High-risk, high-reward attack.
-    * 💨 **Dodge:** Evade incoming enemy strikes.
+    * 💨 **Dodge:** avoid attacking the enemy.
 * **Smart AI:** Enemies will prioritize healing when their health drops below 20%.
 * **Polished Animations:** Smooth transitions using screen clearing and timed delays for an immersive experience.
 
