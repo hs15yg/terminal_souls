@@ -22,7 +22,7 @@ def player():
     bars = life.life_bar(hero_hp, enemy_hp, enemy_name, hero_name)       
     
     while interupt:
-        os.system('cls') 
+        os.system(headers.o_system[0]) 
         print(bars)
         
         menu = f"""
@@ -90,13 +90,13 @@ def player():
                 interupt = False
 
             else:
-                os.system('cls') 
+                os.system(headers.o_system[0]) 
                 print(f"\n{R} [x] INVALID OPTION {RS}")
                 print(f"{Y} Please select a number from 1 to 4.{RS}")
                 time.sleep(1)
 
         except:
-            os.system('cls') 
+            os.system(headers.o_system[0]) 
             print(f"\n{R} [x] INPUT ERROR {RS}")
             print(f"{Y} Check that you are entering numerical data!{RS}")
             time.sleep(1)
@@ -108,7 +108,7 @@ def enemy():
     enemy_name = headers.enemy1["name"]
     hero_name = headers.player["name"]
 
-    os.system('cls')
+    os.system(headers.o_system[0])
     print(life.life_bar(hero_hp, enemy_hp, enemy_name, hero_name))
     print(f"\n{R}┌──────────────────────────────┐")
     print(f"│      ⚠️  ENEMY TURN  ⚠️      │")
@@ -123,7 +123,7 @@ def enemy():
         
         life.heal(False) 
         
-        os.system('cls')
+        os.system(headers.o_system[0])
 
         enemy_hp = headers.enemy1["hp"] 
         print(life.life_bar(hero_hp, enemy_hp, enemy_name, hero_name))
@@ -134,13 +134,13 @@ def enemy():
         print(f"\n {enemy_name} is preparing an attack...")
         time.sleep(1)
 
-        os.system('cls')
+        os.system(headers.o_system[0])
         print(f"\n {R}>> {enemy_name} STRIKES! ⚔️{RS}")
         time.sleep(1)
         
         headers.player["hp"] = life.damage(hero_hp) 
         
-        os.system('cls')
+        os.system(headers.o_system[0])
         hero_hp = headers.player["hp"]
         print(life.life_bar(hero_hp, enemy_hp, enemy_name, hero_name))
         print(f"\n {Y}>> Your HP has decreased!{RS}")

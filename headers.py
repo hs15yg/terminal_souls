@@ -23,7 +23,7 @@ enemy1 = {
     "potions": 3
 }
 
-o_system = ["cls"]
+o_system = ["clear"]
 
 # i create a function called start
 def start():
