@@ -35,7 +35,5 @@ def win_or_lose():
 def o_system():
 
     o = os.system(headers.o_system[0])
-    print(o)
-
     if o > 0:
         headers.o_system[0] = "cls"
